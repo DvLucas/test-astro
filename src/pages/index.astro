@@ -1,5 +1,7 @@
 ---
+import Navigation from "../components/Navigation.astro";
 
+const title = "My Astro Learning Blog";
 ---
 
 <html lang="en">
@@ -11,8 +13,27 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<h1>jj</h1>
+		<Navigation />
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-3 text-center p-3">
+					<h1 class="text-dark">Your agent</h1>
+					<div class="card w-100" style="width: 18rem;">
+						<img
+							src="https://www.valorantpicker.com/assets/imgs/agents/portraits/yoru.png"
+							class="card-img-top"
+							alt="..."
+						/>
+						<div class="card-body">
+							<h3>Nombre</h3>
+							<button class="btn btn-outline-danger w-100"
+								>Get random agent</button
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+		</div>
 	</body>
 </html>
