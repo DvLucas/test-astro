@@ -1,7 +1,16 @@
 ---
+import AgentCard from "../components/AgentCard.astro";
 import Navigation from "../components/Navigation.astro";
+import { AGENTS } from "../consts/agents"
 
 const title = "My Astro Learning Blog";
+let agentSelected: any = null;
+const getRandomAgent = () => {
+	console.log(22);
+	agentSelected = AGENTS[2];
+	return AGENTS[1];
+};
+console.log("init");
 ---
 
 <html lang="en">
@@ -26,9 +35,10 @@ const title = "My Astro Learning Blog";
 						/>
 						<div class="card-body">
 							<h3>Nombre</h3>
-							<button class="btn btn-outline-danger w-100"
+							<button class="btn btn-outline-danger w-100" onclick="getRandomAgent()"
 								>Get random agent</button
 							>
+							{agentSelected ? agentSelected.name : 'gola'}
 						</div>
 					</div>
 				</div>
